@@ -3,7 +3,7 @@ Tasks :
                 b. Explore feature engineering 
 
 2. Ball by Ball Data : a) Test the Ball by ball data on actual LLM
-                       b) Perform feautre engineering
+                       b) Perform feautre engineering - Convert Overs to Total Balls,Calculate Cumulative Runs,Split Extras into Separate Columns
                        c) Perform prompt engineering
 
 3. Try and Test Few shot learning 
