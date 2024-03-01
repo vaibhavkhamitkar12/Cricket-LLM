@@ -4,6 +4,7 @@ Tasks :
 
 2. Ball by Ball Data : a) Test the Ball by ball data on actual LLM
                        b) Perform feautre engineering
+                       c) Perform prompt engineering
 
 3. Try and Test Few shot learning 
 4.Streamlit Development 
