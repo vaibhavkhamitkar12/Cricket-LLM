@@ -1,2 +1,9 @@
-Tasks and documentation
-  
+Tasks : 
+1. Match data : a. Change name of the column to AI or user friendly
+                b. Explore feature engineering 
+
+2. Ball by Ball Data : a) Test the Ball by ball data on actual LLM
+                       b) Perform feautre engineering
+
+3. Try and Test Few shot learning 
+4.Streamlit Development 
