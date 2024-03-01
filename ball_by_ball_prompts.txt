@@ -1,0 +1,17 @@
+ID: Unique identifier for each cricket match.
+innings: Indicates the inning number of the match (1 or 2).
+overs: The current over of the match.In range of 0 to 20
+ballnumber: The sequential number of the ball within the over. 6 balls in an over
+batter: The name of batsman currently facing the ball. 
+bowler: The name bowler delivering the ball.
+non-striker: The name of non-striker batsman at the crease.
+extra_type: Type of extra run scored in the ball (e.g., legbyes, wides, byes,No ball, penalty,N/A - if no extra run is scored in that ball).
+batsman_run: Number of runs scored by the batsman in that particular ball of that particular over.
+extras_run: Additional runs scored through extras if any in that particular ball of that particular over.
+total_run: Total runs scored in the ball, including extras.
+non_boundary: Indicates if the run was a boundary (if non boundary then 1, if boundary or 6 then value is 1).
+isWicketDelivery: Indicates if the ball resulted in a wicket.(If wicket delivery then value is 1 , if not a wicket delivery than value is 0)
+player_out: Name of the Batsman dismissed (if applicable, otherwise N/A).
+kind: Type of dismissal (e.g., caught, bowled, caught and bowled, hit wicket, stumped,lbw, run out,obstructing the field, retired hurt, ).
+fielders_involved: Name of the Fielders involved in the dismissal.(only if caught, caught and bowled, stumped, run out in corresponding kind of dismissal field)
+BattingTeam: The Name of the team batting during this phase of the match.
