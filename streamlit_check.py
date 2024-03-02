@@ -6,11 +6,12 @@ import pyodbc
 @st.cache_resource
 def init_connection():
     return pyodbc.connect(
-        "DRIVER={ODBC Driver 17 for SQL Server};SERVER="
-        + st.secrets["server"]
-        + ";DATABASE="
-        + st.secrets["database"]
-    )
+    "DRIVER={ODBC Driver 17 for SQL Server};"
+    f"SERVER={st.secrets['server']};"
+    f"DATABASE={st.secrets['database']};"
+    "Trusted_Connection=yes;"  # Use trusted connection if applicable
+    ";LoginTimeout=30"  # Set login timeout to 30 seconds
+)
 
 conn = init_connection()
 
