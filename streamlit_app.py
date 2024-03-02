@@ -1,3 +1,22 @@
+# Streamlit app
+def main():
+    st.title("Creative Chatbot")
+
+    user_input = st.text_input("You:", "Type something...")
+
+    if st.button("Send"):
+        # Display user input
+        st.text_area("You:", user_input, height=100)
+
+        # Get chatbot response
+        chatbot_response = "Hello Vaibhav!"
+
+        # Display chatbot response
+        st.text_area("Chatbot:", chatbot_response, height=100)
+
+if __name__ == "__main__":
+    main()
+"""
 # app.py
 import streamlit as st
 
@@ -20,3 +39,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+"""
