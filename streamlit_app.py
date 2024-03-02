@@ -1,7 +1,6 @@
 import streamlit as st
 from sqlalchemy import create_engine
 import os
-from dotenv import load_dotenv
 from langchain.chat_models import AzureChatOpenAI
 from langchain.prompts.chat import ChatPromptTemplate
 from langchain.agents import AgentType, create_sql_agent
