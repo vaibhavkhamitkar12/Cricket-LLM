@@ -1,4 +1,5 @@
 # Streamlit app
+import streamlit as st
 def main():
     st.title("Creative Chatbot")
 
