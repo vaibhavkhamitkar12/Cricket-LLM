@@ -14,7 +14,9 @@ os.environ["OPENAI_API_KEY"]="905cac03e827471192d7d24351bf6374" # Your Azure Ope
 os.environ["OPENAI_CHAT_MODEL"]="gpt-35-turbo-16k" # Use name of deploymenta
 
 # Your ODBC connection string
-odbc_str = 'DRIVER={ODBC Driver 18 for SQL Server};SERVER=DESKTOP-HM7LQLF\\VAIBHAVSERVER;DATABASE=cricllm;Trusted_Connection=yes;TrustServerCertificate=yes;'
+# odbc_str = 'DRIVER={ODBC Driver 18 for SQL Server};SERVER=DESKTOP-HM7LQLF\\VAIBHAVSERVER;DATABASE=cricllm;Trusted_Connection=yes;TrustServerCertificate=yes;'
+odbc_str = 'DRIVER={ODBC Driver 18 for SQL Server};SERVER='+st.secrets["server"]+';DATABASE='+ st.secrets["database"]+';Trusted_Connection=yes;TrustServerCertificate=yes;'
+
 
 # Create SQLAlchemy engine
 db_engine = create_engine(f'mssql+pyodbc:///?odbc_connect={odbc_str}')
