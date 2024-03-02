@@ -14,7 +14,7 @@ os.environ["OPENAI_API_KEY"]="905cac03e827471192d7d24351bf6374" # Your Azure Ope
 os.environ["OPENAI_CHAT_MODEL"]="gpt-35-turbo-16k" # Use name of deploymenta
 
 # Your ODBC connection string
-odbc_str = 'Driver={ODBC Driver 18 for SQL Server};Server=tcp:cricllm.database.windows.net,1433;Database=cricllm;Uid=cricllm;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
+odbc_str = 'Driver={ODBC Driver 18 for SQL Server};Server=tcp:cricllm.database.windows.net,1433;Database=cricllm;Uid=cricllm;Pwd=admin*000;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
 # odbc_str = 'DRIVER={ODBC Driver 18 for SQL Server};SERVER='+st.secrets["server"]+';DATABASE='+ st.secrets["database"]+';Trusted_Connection=yes;TrustServerCertificate=yes;'
 
 
