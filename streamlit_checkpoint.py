@@ -15,7 +15,7 @@ os.environ["OPENAI_API_KEY"] = "905cac03e827471192d7d24351bf6374"
 os.environ["OPENAI_CHAT_MODEL"] = "gpt-35-turbo-16k"
 
 # Your ODBC connection string
-odbc_str = 'Driver={ODBC Driver 18 for SQL Server};Server='+ st.secrets["server"] +','+ st.secrets["id"] +';Database='+ st.secrets["database"] +';Uid='+ st.secrets["username"] +';Pwd='+ st.secrets["pass"] +';Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
+odbc_str = 'Driver={ODBC Driver 17 for SQL Server};Server='+ st.secrets["server"] +','+ st.secrets["id"] +';Database='+ st.secrets["database"] +';Uid='+ st.secrets["username"] +';Pwd='+ st.secrets["pass"] +';Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
 
 # Create ODBC connection
 conn = pyodbc.connect(odbc_str)
