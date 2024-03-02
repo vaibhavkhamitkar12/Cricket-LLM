@@ -1,3 +1,4 @@
+import streamlit as st
 from sqlalchemy import create_engine
 import os
 from dotenv import load_dotenv
