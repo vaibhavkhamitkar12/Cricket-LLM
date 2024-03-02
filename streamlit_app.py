@@ -1,43 +1,25 @@
-# Streamlit app
 import streamlit as st
-def main():
-    st.title("Creative Chatbot")
 
-    user_input = st.text_input("You:", "Type something...")
+def main():
+    st.title("Interactive Chatbot")
+
+    # User input
+    user_input = st.text_area("You:", "Type something...", height=100)
 
     if st.button("Send"):
         # Display user input
         st.text_area("You:", user_input, height=100)
 
         # Get chatbot response
-        chatbot_response = "Hello Vaibhav!"
+        chatbot_response = get_chatbot_response(user_input)
 
         # Display chatbot response
         st.text_area("Chatbot:", chatbot_response, height=100)
 
-if __name__ == "__main__":
-    main()
-"""
-# app.py
-import streamlit as st
-
-def main():
-    st.title("Simple Streamlit App")
-    
-    # Add a text input widget
-    user_input = st.text_input("Enter your name:", "Your Name")
-    
-    # Display a message using the user input
-    st.write(f"Hello, {user_input}!")
-
-    # Add a slider widget
-    age = st.slider("Select your age:", 0, 100, 25)
-    st.write(f"You selected age: {age}")
-
-    # Add a button widget
-    if st.button("Click me!"):
-        st.success("Button clicked!")
+def get_chatbot_response(user_input):
+    # Add your chatbot logic here
+    # For simplicity, let's just echo the user's input
+    return f"Chatbot says: '{user_input}'"
 
 if __name__ == "__main__":
     main()
-"""
