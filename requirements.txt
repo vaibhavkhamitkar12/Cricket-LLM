@@ -2,3 +2,4 @@ streamlit
 sqlalchemy
 langchain 
 pyodbc
+openai
