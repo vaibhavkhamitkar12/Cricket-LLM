@@ -1,5 +1,0 @@
-streamlit
-pandas
-langchain
-sqlalchemy
-pyodbc
