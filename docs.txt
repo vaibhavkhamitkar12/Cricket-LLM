@@ -7,4 +7,5 @@ Tasks :
                        c) Perform prompt engineering
 
 3. Try and Test Few shot learning 
-4.Streamlit Development 
+4. Fill in city NA values in 2020/2021 season according to corresponding stadium
+5.  3rd,4th,5th,6th Super over 1st innings,2nd,2nd super over 1st innings,2nd super over 2nd innings 
