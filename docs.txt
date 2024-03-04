@@ -10,4 +10,5 @@ Tasks :
 4. Fill in city NA values in 2020/2021 season according to corresponding stadium
 5.  3rd,4th,5th,6th Super over 1st innings,2nd,2nd super over 1st innings,2nd super over 2nd innings 
 6. SuperOver margin filling
-7. Where WonBy = NO results there winner = no Result , super Over = NA, Player of the match = No result  
+7. Where WonBy = NO results there winner = no Result , super Over = NA, Player of the match = No result
+8. Change the names of the column accordingly
