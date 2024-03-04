@@ -1,0 +1,102 @@
+streamlit
+pandas
+langchain
+sqlalchemy
+pyodbc
+
+# Streamlit app
+def run_continuous_chatbot():
+    #st.title("🏏 Continuous Messaging Cricket Chatbot")
+    st.sidebar.header("What is CricLLM")
+
+    # Create a sidebar for user options
+    user_question = st.sidebar.text_input("Ask a question:", "How many matches did Mumbai Indians win?")
+    submit_button = st.sidebar.button("Ask Chatbot")
+
+    # Main content area
+    st.markdown("---")
+
+    # Display the cricket-themed image
+    #st.image("cricket_image.jpg", caption="Cricket Image", use_column_width=True)
+
+    # Add a colorful and styled title
+    st.markdown(
+        "<h1 style='text-align: center; color: #ff9900;'>Cricket ChatBot for Analysis</h1>",
+        unsafe_allow_html=True
+    )
+
+    # Display user input and chatbot responses in a continuous chat style
+    chat_history = st.session_state.get("chat_history", [])
+
+    user_question = st.session_state.text_input("Ask a question:", "How many matches did Mumbai Indians win?")
+    submit_button = st.session_state.button("Ask Chatbot")
+    
+    if submit_button:
+        # Fetch chatbot response
+        response = sqldb_agent.run(user_question)
+
+        # Update chat history
+        chat_history.append(("User", user_question ))
+        chat_history.append(("Chatbot", response ))
+
+        # Save chat history to session state
+        st.session_state.chat_history = chat_history
+        
+    # Display chat history
+    st.subheader("Chat History:")
+    for sender, message in chat_history:
+        st.write(f"{sender}: {message}")
+
+    # Add a fun cricket GIF
+    st.markdown("---")
+    #st.image("images/cricket_gif.gif", caption="Cricket GIF", use_column_width=True)
+
+# Run the app
+if __name__ == "__main__":
+    run_continuous_chatbot()
+
+"""
+# Streamlit app
+def run_continuous_chatbot():
+    st.title("🏏 Continuous Messaging Cricket Chatbot")
+    st.sidebar.header("User Options")
+
+    # Create a sidebar for user options
+    user_question = st.sidebar.text_input("Ask a question:", "How many matches did Mumbai Indians win?")
+    submit_button = st.sidebar.button("Ask Chatbot")
+
+    # Main content area
+    st.markdown("---")
+
+    # Display the cricket-themed image
+    st.image("cricket_image.jpg", caption="Cricket Image", use_column_width=True)
+
+    # Add a colorful and styled title
+    st.markdown(
+        "<h1 style='text-align: center; color: #ff9900;'>Continuous Messaging Cricket Chatbot</h1>",
+        unsafe_allow_html=True
+    )
+
+    # Display user input and chatbot responses in a continuous chat style
+    chat_history = []
+
+    if submit_button:
+        # Fetch chatbot response
+        response = sqldb_agent.run(user_question)
+
+        # Update chat history
+        chat_history.append(("User", user_question))
+        chat_history.append(("Chatbot", response))
+
+    # Display chat history
+    st.subheader("Chat History:")
+    for sender, message in chat_history:
+        st.write(f"{sender}: {message}")
+
+    # Add a fun cricket GIF
+    st.markdown("---")
+    #st.image("images/cricket_gif.gif", caption="Cricket GIF", use_column_width=True)
+
+if __name__ == "__main__":
+    run_continuous_chatbot()
+"""
