@@ -18,3 +18,12 @@ venue_to_city = {
     "Dubai International Cricket Stadium": "Dubai",
     "Sharjah Cricket Stadium": "Sharjah"
 }
+
+
+#Vaibhav update 
+def bat_over_type(x):
+    if x <= 5:
+        return "PowerPlay"
+    elif x >= 16:
+        return "DeathOver"
+data["over_type"] = data['overs'].apply(bat_over_type)
