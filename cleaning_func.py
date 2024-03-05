@@ -27,3 +27,14 @@ def bat_over_type(x):
     elif x >= 16:
         return "DeathOver"
 data["over_type"] = data['overs'].apply(bat_over_type)
+
+#update
+#Vaibhav update 
+def chase_defend(x):
+    if x == "Wickets":
+        return "Chasing"
+    elif x == "Runs":
+        return "Defending"
+data["chase_or_defend"] = data['WonBy'].apply(chase_defend)
+
+
