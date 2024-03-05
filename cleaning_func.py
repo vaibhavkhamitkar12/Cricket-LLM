@@ -1,3 +1,8 @@
+#Match Result - Het 
+def match_result(df):
+    result_table = df.copy()
+    result_table.loc[result_table["WonBy"] == "NoResults", ["SuperOver", "WinningTeam", "Margin", "method", "Player_of_Match"]] = "NoResults"
+    return result_table
 
 def update_city_based_on_venue(df, venue_to_city):
   """
