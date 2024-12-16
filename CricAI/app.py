@@ -11,8 +11,8 @@ from langchain.agents.agent_toolkits.sql.toolkit import SQLDatabaseToolkit
 os.environ["OPENAI_API_TYPE"]="azure"
 os.environ["OPENAI_API_VERSION"]="2023-07-01-preview"
 os.environ["OPENAI_API_BASE"]="https://cricai.openai.azure.com//openai/deployments/cricaidep/chat/completions?api-version=2023-07-01" # Your Azure OpenAI resource endpoint
-os.environ["OPENAI_API_KEY"]="905cac03e827471192d7d24351bf6374" # Your Azure OpenAI resource key
-os.environ["OPENAI_CHAT_MODEL"]="gpt-35-turbo-16k" # Use name of deploymenta
+os.environ["OPENAI_API_KEY"]="905cac03e827471192d7d24351bf6374" 
+os.environ["OPENAI_CHAT_MODEL"]="gpt-35-turbo-16k"
 
 # Your ODBC connection string
 odbc_str = 'DRIVER={ODBC Driver 18 for SQL Server};SERVER=DESKTOP-HM7LQLF\\VAIBHAVSERVER;DATABASE=cricllm;Trusted_Connection=yes;TrustServerCertificate=yes;'
@@ -29,6 +29,8 @@ final_prompt = ChatPromptTemplate.from_messages(
         ("system", 
          """
           You are a helpful AI assistant expert in querying SQL Database.
+          DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database.
+          If the question does not seem related to the database, just return "I don't know" as the answer.
           You are an assistant that provides statistical and analytical answers to user's question about Matches and ball_to_ball table.
 
           Matches table:
